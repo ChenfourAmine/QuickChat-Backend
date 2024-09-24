@@ -6,7 +6,7 @@ import java.util.Vector;
 
 public class Conversation {
 
-	private User firstPerson;
+	private User firstUser;
 	private User secondUser;
 	private List<Message> messages;
 	
@@ -14,19 +14,18 @@ public class Conversation {
 		this.messages = new Vector<Message>();
 	}
 
-	public Conversation(User firstPerson, User secondUser, List<Message> messages) {
-		super();
-		this.firstPerson = firstPerson;
+	public Conversation(User firstUser, User secondUser) {
+		this();
+		this.firstUser = firstUser;
 		this.secondUser = secondUser;
-		this.messages = messages;
 	}
 
-	public User getFirstPerson() {
-		return firstPerson;
+	public User getFirstUser() {
+		return firstUser;
 	}
 
-	public void setFirstPerson(User firstPerson) {
-		this.firstPerson = firstPerson;
+	public void setFirstUser(User firstUser) {
+		this.firstUser = firstUser;
 	}
 
 	public User getSecondUser() {

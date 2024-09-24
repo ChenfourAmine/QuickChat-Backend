@@ -3,6 +3,8 @@ package org.quickchat.models;
 import java.util.List;
 import java.util.Vector;
 
+import org.quickchat.enums.Gender;
+
 public class User {
 
 	private String id;
@@ -10,7 +12,7 @@ public class User {
 	private String email;
 	private String phoneNumber;
 	private String photo;
-	private String gender;
+	private Gender gender;
 	private List<User> friends;
 	private List<Conversation> conversations;
 	
@@ -19,16 +21,13 @@ public class User {
 		this.conversations = new Vector<Conversation>();
 	}
 
-	public User(String userName, String email, String phoneNumber, String photo, String gender,
-			List<User> friends, List<Conversation> conversations) {
-		super();
+	public User(String userName, String email, String phoneNumber, String photo, Gender gender) {
+		this();
 		this.userName = userName;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
 		this.photo = photo;
 		this.gender = gender;
-		this.friends = friends;
-		this.conversations = conversations;
 	}
 
 	public String getId() {
@@ -71,11 +70,11 @@ public class User {
 		this.photo = photo;
 	}
 
-	public String getGender() {
+	public Gender getGender() {
 		return gender;
 	}
 
-	public void setGender(String gender) {
+	public void setGender(Gender gender) {
 		this.gender = gender;
 	}
 

@@ -16,6 +16,16 @@ public class Message {
 	public Message() {
 	}
 
+	public Message(String id, User sender, User receiver, String content) {
+		super();
+		this.id = id;
+		this.sender = sender;
+		this.receiver = receiver;
+		this.content = content;
+		this.date = new Date();
+		this.type = MessageType.text;
+	}
+
 	public Message(User sender, User receiver, String content, Date date, MessageType type) {
 		super();
 		this.sender = sender;
