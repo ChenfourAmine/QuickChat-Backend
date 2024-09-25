@@ -4,6 +4,7 @@ import org.quickchat.enums.RelationType;
 
 public class Relation {
 	
+	private String id;
 	private User firstUser;
 	private User secondUser;
 	private RelationType relationType;
@@ -17,7 +18,15 @@ public class Relation {
 		this.secondUser = secondUser;
 		this.relationType = relationType;
 	}
+	
+	public String getId() {
+		return id;
+	}
 
+	public void setId(String id) {
+		this.id = id;
+	}
+	
 	public User getFirstUser() {
 		return firstUser;
 	}
